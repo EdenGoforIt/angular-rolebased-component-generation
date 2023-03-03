@@ -1,6 +1,7 @@
 import {
   AfterViewInit,
   Component,
+  ComponentRef,
   OnInit,
   TemplateRef,
   ViewChild,
@@ -37,14 +38,23 @@ export class InspectionComponent implements AfterViewInit {
   }
 
   generateInspectionComponent(role: string) {
+    let componentRef = undefined;
     if (this.viewRef) {
       this.viewRef.clear();
     }
 
     if (role === 'ap') {
-      this.viewRef.createComponent(APComponent);
+      componentRef = this.viewRef.createComponent(APComponent);
+      componentRef.instance.data = {
+        id: 1,
+        name: 'Morgan',
+      };
     } else if (role === 'qo') {
-      this.viewRef.createComponent(QOComponent);
+      componentRef = this.viewRef.createComponent(QOComponent);
+      componentRef.instance.data = {
+        id: 1,
+        name: 'Morgan',
+      };
     } else {
       this.viewRef.createEmbeddedView(this.error);
     }

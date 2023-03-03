@@ -47,13 +47,13 @@ export class InspectionComponent implements AfterViewInit {
       componentRef = this.viewRef.createComponent(APComponent);
       componentRef.instance.data = {
         id: 1,
-        name: 'Morgan',
+        name: 'Morgan Accredited Person',
       };
     } else if (role === 'qo') {
       componentRef = this.viewRef.createComponent(QOComponent);
       componentRef.instance.data = {
         id: 1,
-        name: 'Morgan',
+        name: 'Eden Quarantine officer',
       };
     } else {
       this.viewRef.createEmbeddedView(this.error);

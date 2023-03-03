@@ -5,9 +5,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './ap.component.html',
 })
 export class APComponent {
+  // if need to pass the data from the inspection component use it
   @Input() data: { id: number; name: string };
-
-  // @Input('data') set data(value: any) {
-  //   console.log('value', value);
-  // }
 }

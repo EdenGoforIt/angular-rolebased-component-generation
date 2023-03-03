@@ -1,0 +1,10 @@
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.show-btn,
+.remove-btn {
+  font-size: 14px;
+  margin: 20px;
+}
